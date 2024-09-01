@@ -3,11 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Css -->
     <link rel="stylesheet" href="/style/css/style.css" />
     <title>Contagem regressiva para o Ano Novo</title>
   </head>
   <body>
-    <div class="weather-wrapper container">
+    <div class="weather-wrapper">
       <div class="form">
         <h3>Confira o clima de uma cidade:</h3>
         <div class="form-input-container">
@@ -23,6 +32,16 @@
       </div>
       <div id="weather-data" class="hide">
         <!-- <h2><i class="fa-solid fa-location-dot"></i> <span id="city"></span> <img id="country"></img></h2> -->
+        <h2>
+          <i class="fa-solid fa-location-dot"></i>
+          <span id="city">
+            <img
+              src="https://countryflagsapi.com/png/"
+              alt="Bandeira do país"
+              id="country"
+            />
+          </span>
+        </h2>
         <p id="temperature"><span></span>&deg;C</p>
         <div id="description-container">
           <p id="description"></p>
@@ -54,6 +73,7 @@
       </div>
     </div>
 
+    <!-- TIMER -->
     <div class="timer-wrapper">
       <div id="year" class="year"></div>
 
