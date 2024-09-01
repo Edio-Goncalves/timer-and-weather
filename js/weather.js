@@ -21,6 +21,18 @@ const loader = document.querySelector("#loader");
 const suggestionContainer = document.querySelector("#suggestions");
 const suggestionButtons = document.querySelectorAll("#suggestions button");
 
+// error
+const showErrorMessage = () => {
+  errorMessageContainer.classList.remove("hide");
+};
+
+const hideInformation = () => {
+  errorMessageContainer.classList.add("hide");
+  weatherContainer.classList.add("hide");
+
+  suggestionContainer.classList.add("hide");
+};
+
 const showWeatherData = async (city) => {
   hideInformation();
 
