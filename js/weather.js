@@ -86,3 +86,12 @@ cityInput.addEventListener("keyup", (e) => {
     showWeatherData(city);
   }
 });
+
+// Sugestões
+suggestionButtons.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const city = btn.getAttribute("id");
+
+    showWeatherData(city);
+  });
+});
