@@ -12,3 +12,24 @@ const weatherIconElement = document.querySelector("#weather-icon");
 const countryElement = document.querySelector("#country");
 const umidityElement = document.querySelector("#umidity span");
 const windElement = document.querySelector("#wind span");
+
+const showWeatherData = async (city) => {
+  hideInformation();
+};
+
+/* events */
+searchBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+
+  const city = cityInput.value;
+
+  showWeatherData(city);
+});
+
+cityInput.addEventListener("keyup", (e) => {
+  if (e.code === "Enter") {
+    const city = e.target.value;
+
+    showWeatherData(city);
+  }
+});
