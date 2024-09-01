@@ -26,9 +26,9 @@ const updateCountdown = () => {
   daysContainer.textContent = inserttimeunit(days);
 };
 
-setTimeout(() => {
-  loading.remove();
-  countdown.style.display = "flex";
-}, 1000);
+// setTimeout(() => {
+//   loading.remove();
+//   countdown.style.display = "flex";
+// }, 1000);
 
 setInterval(updateCountdown, 1000);
