@@ -21,7 +21,6 @@ body {
   overflow: hidden;
 }
 
-/* Add a dark overlay */
 body::after {
   content: "";
   position: absolute;
@@ -52,7 +51,7 @@ h1 {
 }
 
 .countdown {
-  display: flex;
+  display: none;
   transform: scale(2);
 }
 
