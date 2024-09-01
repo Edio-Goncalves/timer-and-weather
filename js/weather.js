@@ -13,8 +13,39 @@ const countryElement = document.querySelector("#country");
 const umidityElement = document.querySelector("#umidity span");
 const windElement = document.querySelector("#wind span");
 
+const weatherContainer = document.querySelector("#weather-data");
+
+const errorMessageContainer = document.querySelector("#error-message");
+const loader = document.querySelector("#loader");
+
+const suggestionContainer = document.querySelector("#suggestions");
+const suggestionButtons = document.querySelectorAll("#suggestions button");
+
 const showWeatherData = async (city) => {
   hideInformation();
+
+  const data = await getWeatherData(city);
+
+  if (data.cod === "404") {
+    showErrorMessage();
+    return;
+  }
+
+  cityElement.innerText = data.name;
+  tempElement.innerText = parseInt(data.main.temp);
+  descElement.innerText = data.weather[0].description;
+  weatherIconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
+  );
+  countryElement.setAttribute("src", apiCountryURL + data.sys.country);
+  umidityElement.innerText = `${data.main.humidity}%`;
+  windElement.innerText = `${data.wind.speed}km/h`;
+
+  // Change bg image
+  document.body.style.backgroundImage = `url("${apiUnsplash + city}")`;
+
+  weatherContainer.classList.remove("hide");
 };
 
 /* events */
