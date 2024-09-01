@@ -72,9 +72,6 @@ const showWeatherData = async (city) => {
   umidityElement.innerText = `${data.main.humidity}%`;
   windElement.innerText = `${data.wind.speed}km/h`;
 
-  // Change bg image
-  document.body.style.backgroundImage = `url("${apiUnsplash + city}")`;
-
   weatherContainer.classList.remove("hide");
 };
 
