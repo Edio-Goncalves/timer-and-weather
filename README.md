@@ -2,6 +2,8 @@
 
 Este projeto é uma aplicação web que combina um temporizador de contagem regressiva para o final do ano com uma API de previsão do tempo. A aplicação permite aos usuários acompanhar o tempo restante enquanto exibe as condições meteorológicas atuais e a previsão para o local especificado.
 
+![Cover](./img/temporizador.png)
+
 ### Funcionalidades
 
 - Contagem Regressiva: Um temporizador dinâmico que exibe o tempo restante em dias, horas, minutos e segundos até o final do ano.
@@ -30,7 +32,3 @@ cd timer-and-weather
 ```
 
 3. Abra o arquivo `index.html` no seu navegador preferido para
-
-### Capturas de Tela
-
-![Cover](./img/temporizador.png)
