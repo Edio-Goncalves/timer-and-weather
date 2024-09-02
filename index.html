@@ -16,6 +16,40 @@
     <title>Contagem regressiva para o Ano Novo</title>
   </head>
   <body>
+    <!-- TIMER -->
+    <div class="timer-wrapper">
+      <div id="year" class="year"></div>
+
+      <h1>Contagem regressiva para o ano novo</h1>
+
+      <div id="countdown" class="countdown">
+        <div class="time">
+          <h2 id="days">00</h2>
+          <small>dias</small>
+        </div>
+        <div class="time">
+          <h2 id="hours">00</h2>
+          <small>horas</small>
+        </div>
+        <div class="time">
+          <h2 id="minutes">00</h2>
+          <small>minutos</small>
+        </div>
+        <div class="time">
+          <h2 id="seconds">00</h2>
+          <small>segundos</small>
+        </div>
+      </div>
+
+      <img
+        src="./img/spinner.gif"
+        alt="Carregando..."
+        id="loading"
+        class="loading"
+      />
+    </div>
+
+    <!-- WEATHER -->
     <div class="weather-wrapper">
       <div class="form">
         <h3>Confira o clima de uma cidade:</h3>
@@ -70,39 +104,6 @@
         <button id="fortaleza">Fortaleza</button>
         <button id="maceio">Maceió</button>
       </div>
-    </div>
-
-    <!-- TIMER -->
-    <div class="timer-wrapper">
-      <div id="year" class="year"></div>
-
-      <h1>Contagem regressiva para o ano novo</h1>
-
-      <div id="countdown" class="countdown">
-        <div class="time">
-          <h2 id="days">00</h2>
-          <small>dias</small>
-        </div>
-        <div class="time">
-          <h2 id="hours">00</h2>
-          <small>horas</small>
-        </div>
-        <div class="time">
-          <h2 id="minutes">00</h2>
-          <small>minutos</small>
-        </div>
-        <div class="time">
-          <h2 id="seconds">00</h2>
-          <small>segundos</small>
-        </div>
-      </div>
-
-      <img
-        src="./img/spinner.gif"
-        alt="Carregando..."
-        id="loading"
-        class="loading"
-      />
     </div>
 
     <script src="/js/loading.js"></script>
