@@ -54,6 +54,11 @@ const hideInformation = () => {
 const showWeatherData = async (city) => {
   hideInformation();
 
+  if (!city) {
+    showErrorMessage();
+    return;
+  }
+
   const data = await getWeatherData(city);
 
   if (data.cod === "404") {
@@ -82,6 +87,12 @@ cityInput.addEventListener("keyup", (e) => {
 
     showWeatherData(city);
   }
+});
+
+searchBtn.addEventListener("click", () => {
+  const city = cityInput.value;
+
+  showWeatherData(city);
 });
 
 // Sugestões
