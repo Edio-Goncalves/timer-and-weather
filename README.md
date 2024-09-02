@@ -30,3 +30,7 @@ cd timer-and-weather
 ```
 
 3. Abra o arquivo `index.html` no seu navegador preferido para
+
+### Capturas de Tela
+
+![Cover](./img/temporizador.png)
